@@ -8,8 +8,19 @@ that future agent sessions can load quickly.
 
 - `ctx` repo: <https://github.com/ActiveMemory/ctx>
 - `ctx` docs: <https://ctx.ist>
+- `ctx` license: <https://github.com/ActiveMemory/ctx/blob/main/LICENSE>
 - skill source:
   <https://github.com/ActiveMemory/ctx/tree/main/internal/assets/claude/skills/ctx-architecture>
+
+## License Note
+
+`ctx` is licensed under Apache-2.0, not MIT. That still makes it broadly usable
+as open source software: people can generally use it, modify it, redistribute
+it, and use it commercially, provided they follow the Apache-2.0 requirements.
+
+This repo links to the upstream skill instead of copying it. If you vendor or
+modify upstream skill files, preserve the upstream license notices and check the
+license text directly.
 
 ## What It Does
 

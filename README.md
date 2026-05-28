@@ -19,11 +19,26 @@ into a repo through ordinary project docs such as `AGENTS.md`, `.context/`,
 
 - `ctx`: <https://github.com/ActiveMemory/ctx>
 - `ctx` docs: <https://ctx.ist>
+- `ctx` license: Apache-2.0, not MIT. See
+  <https://github.com/ActiveMemory/ctx/blob/main/LICENSE>.
 - `ctx-architecture` skill source:
   <https://github.com/ActiveMemory/ctx/tree/main/internal/assets/claude/skills/ctx-architecture>
 - Matt Pocock skills repo: <https://github.com/mattpocock/skills>
 - `grill-with-docs` skill source:
   <https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs>
+
+## License Context
+
+This notes repo is MIT licensed because it only contains my generic setup notes.
+
+The upstream `ctx` project is Apache-2.0 licensed. Apache-2.0 is still a
+permissive open source license: people can generally use, modify, redistribute,
+and build on the project, including commercially, as long as they follow the
+license terms such as preserving notices and marking modified files. Apache-2.0
+also includes an explicit patent grant.
+
+Always check each upstream repository's own license before copying source files
+or vendoring a skill.
 
 ## Safety Boundary
 
