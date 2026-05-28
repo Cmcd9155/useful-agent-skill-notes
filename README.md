@@ -66,3 +66,35 @@ The pattern I like is:
 
 In practice, that gives the agent useful memory without turning every chat into
 a giant prompt.
+
+## How ctx Helps Keep Docs Fresh
+
+`ctx` does not magically guarantee that docs are always current. It gives the
+agent useful signals that docs may be stale, then the agent or human refreshes
+the relevant files.
+
+Signals `ctx` and the architecture workflow can use:
+
+- Broken path references: if `ARCHITECTURE.md` mentions a file or folder that
+  no longer exists, `ctx drift` can flag it.
+- Missing required files: if expected `.context` files are gone, `ctx doctor`
+  or `ctx drift` can notice.
+- Staleness markers: too many completed tasks, old context, or docs that have
+  not been refreshed recently can suggest cleanup or a refresh.
+- Git changes: the architecture skill can compare analyzed module dates against
+  `git log`.
+- Coverage tracking: `.context/map-tracking.json` records which modules were
+  analyzed, when they were analyzed, and with what confidence.
+- Repo scan: `ctx sync` can scan for new directories or manifest changes that
+  docs may not mention yet.
+
+The practical loop is:
+
+```text
+Code changes -> ctx detects drift or AGENTS.md rules trigger a refresh
+             -> agent runs ctx-architecture
+             -> .context docs and map-tracking.json are updated
+```
+
+So I think of it as a smoke alarm plus a maintenance routine: `ctx` points at
+likely drift, and the architecture skill updates the map from the code.

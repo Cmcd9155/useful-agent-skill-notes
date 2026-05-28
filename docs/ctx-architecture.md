@@ -37,6 +37,35 @@ The useful idea is incremental mapping. The agent does not need to rediscover
 the whole repo every time. It can check tracking metadata, inspect changed
 areas, and refresh only the architecture surfaces that actually moved.
 
+## How It Finds Stale Architecture Docs
+
+The workflow uses several simple signals:
+
+- Broken path references: if architecture docs mention a file or folder that no
+  longer exists, `ctx drift` can flag it.
+- Missing required files: if expected `.context` files are gone, `ctx doctor`
+  or `ctx drift` can notice.
+- Staleness markers: old context, too many completed tasks, or docs that have
+  not been refreshed recently can suggest cleanup or a new pass.
+- Git changes: the skill can compare module analysis dates against `git log`.
+- Coverage tracking: `.context/map-tracking.json` records analyzed modules,
+  timestamps, confidence, and notes.
+- Repo scan: `ctx sync` can find new directories or manifest changes that docs
+  may not mention yet.
+
+The update loop is:
+
+```text
+Repo changes
+  -> ctx drift/sync/status reveals possible stale context
+  -> ctx-architecture reads the changed or low-confidence areas
+  -> ARCHITECTURE.md, DETAILED_DESIGN.md, and map-tracking.json are refreshed
+```
+
+This is not automatic perfection. It is a lightweight maintenance system that
+makes drift visible and gives agents enough structure to update the docs from
+the actual code.
+
 ## Install
 
 Follow the upstream `ctx` installation instructions:
