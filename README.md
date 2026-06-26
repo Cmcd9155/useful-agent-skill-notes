@@ -13,6 +13,7 @@ into a repo through ordinary project docs such as `AGENTS.md`, `.context/`,
 |---|---|
 | [ctx architecture](docs/ctx-architecture.md) | How I use `ctx` plus the `/ctx-architecture` skill to keep architecture docs fresh. |
 | [grill-with-docs](docs/grill-with-docs.md) | How I use `/grill-with-docs` to stress-test plans against project language and ADRs. |
+| [opencode bubblewrap sandbox](docs/opencode-bubblewrap-sandbox.md) | Sketch for running many `opencode serve` sessions in one container with per-session filesystem views. |
 | [repo setup checklist](docs/repo-setup-checklist.md) | A generic checklist for wiring these workflows into a project. |
 
 ## Sources
