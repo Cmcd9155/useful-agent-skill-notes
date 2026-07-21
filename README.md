@@ -13,7 +13,9 @@ into a repo through ordinary project docs such as `AGENTS.md`, `.context/`,
 |---|---|
 | [ctx architecture](docs/ctx-architecture.md) | How I use `ctx` plus the `/ctx-architecture` skill to keep architecture docs fresh. |
 | [grill-with-docs](docs/grill-with-docs.md) | How I use `/grill-with-docs` to stress-test plans against project language and ADRs. |
+| [Oh My OpenAgent](docs/oh-my-openagent.md) | Notes on its OpenCode multi-agent orchestration, Team Mode, goal loop, and adoption cautions. |
 | [repo setup checklist](docs/repo-setup-checklist.md) | A generic checklist for wiring these workflows into a project. |
+| [security audit (2026-07-19)](docs/security-audit-2026-07-19.md) | Source-level review with exact upstream commits pinned for the notes repo and Oh My OpenAgent. |
 
 ## Sources
 
@@ -26,6 +28,8 @@ into a repo through ordinary project docs such as `AGENTS.md`, `.context/`,
 - Matt Pocock skills repo: <https://github.com/mattpocock/skills>
 - `grill-with-docs` skill source:
   <https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs>
+- Oh My OpenAgent:
+  <https://github.com/code-yeongyu/oh-my-openagent>
 
 ## License Context
 
